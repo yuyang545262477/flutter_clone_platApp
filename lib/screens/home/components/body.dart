@@ -20,14 +20,39 @@ class Body extends StatelessWidget {
               print('TitleWithMoreButton');
             },
           ),
-          RecomendPlantCard(
-            image: "assets/images/image_1.png",
-            country: "russia",
-            title: "samantha",
-            price: 440,
-            press: () {
-              print('RecomendPlantCard');
-            },
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                RecomendPlantCard(
+                  image: "assets/images/image_1.png",
+                  country: "russia",
+                  title: "samantha",
+                  price: 445,
+                  press: () {
+                    print('RecomendPlantCard');
+                  },
+                ),
+                RecomendPlantCard(
+                  image: "assets/images/image_2.png",
+                  country: "russia",
+                  title: "samantha",
+                  price: 430,
+                  press: () {
+                    print('RecomendPlantCard');
+                  },
+                ),
+                RecomendPlantCard(
+                  image: "assets/images/image_3.png",
+                  country: "russia",
+                  title: "samantha",
+                  price: 420,
+                  press: () {
+                    print('RecomendPlantCard');
+                  },
+                ),
+              ],
+            ),
           ),
         ],
       ),
