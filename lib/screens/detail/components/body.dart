@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hello_flutter/constants.dart';
 
 class Body extends StatelessWidget {
@@ -11,7 +12,28 @@ class Body extends StatelessWidget {
       children: [
         Row(
           children: [
-            Expanded(child: Column()),
+            Expanded(
+                child: Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                        child: Column(
+                      children: [
+                        IconButton(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: kDefaultPadding),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
+                        )
+                      ],
+                    ))
+                  ],
+                )
+              ],
+            )),
             Container(
               height: size.height * .8,
               width: size.width * .75,
