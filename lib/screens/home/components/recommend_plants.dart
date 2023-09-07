@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/constants.dart';
+import 'package:hello_flutter/screens/detail/details_screen.dart';
 
 class RecommendsPlants extends StatelessWidget {
   const RecommendsPlants({
@@ -18,7 +19,11 @@ class RecommendsPlants extends StatelessWidget {
             title: "samantha",
             price: 445,
             press: () {
-              print('RecomendPlantCard');
+              // print('RecomendPlantCard');
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DetailScreen()));
             },
           ),
           RecomendPlantCard(
@@ -27,7 +32,11 @@ class RecommendsPlants extends StatelessWidget {
             title: "samantha",
             price: 430,
             press: () {
-              print('RecomendPlantCard');
+              // print('RecomendPlantCard');
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DetailScreen()));
             },
           ),
           RecomendPlantCard(
@@ -36,7 +45,11 @@ class RecommendsPlants extends StatelessWidget {
             title: "samantha",
             price: 420,
             press: () {
-              print('RecomendPlantCard');
+              // print('RecomendPlantCard');
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DetailScreen()));
             },
           ),
         ],
@@ -74,6 +87,7 @@ class RecomendPlantCard extends StatelessWidget {
           GestureDetector(
             onTap: () {
               press();
+              // print('GestureDetector');
             },
             child: Container(
               padding: const EdgeInsets.all(kDefaultPadding / 2),
