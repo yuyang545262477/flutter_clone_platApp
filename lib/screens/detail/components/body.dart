@@ -25,14 +25,23 @@ class Body extends StatelessWidget {
                 height: 84,
                 child: FilledButton(
                   style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0),
+                      shape: MaterialStateProperty.all(
+                          const RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.only(topRight: Radius.circular(20)),
                   ))),
                   onPressed: () {},
-                  child: const Text('Buy now'),
+                  child: const Text(
+                    'Buy now',
+                    style: TextStyle(fontSize: 16),
+                  ),
                 ),
-              )
+              ),
+              Expanded(
+                  child: TextButton(
+                onPressed: () {},
+                child: const Text("Description"),
+              )),
             ],
           )
         ],
