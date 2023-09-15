@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_flutter/constants.dart';
 import 'package:hello_flutter/screens/detail/components/image_and_Icons.dart';
 
 import 'title_and_price.dart';
@@ -13,8 +12,8 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          ImageAndIcons(),
-          TitleAndPrice(
+          const ImageAndIcons(),
+          const TitleAndPrice(
             title: 'Angelica',
             country: 'Russia',
             price: 440,
@@ -31,7 +30,7 @@ class Body extends StatelessWidget {
                     borderRadius: BorderRadius.circular(0),
                   ))),
                   onPressed: () {},
-                  child: Text('Buy now'),
+                  child: const Text('Buy now'),
                 ),
               )
             ],
